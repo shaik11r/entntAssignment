@@ -15,6 +15,8 @@ export const productSlice = createSlice({
           product.quantity = action.payload.quantity;
           product.price = action.payload.price;
           product.rating.rate = action.payload.rating;
+          product.rating.count = action.payload.userCount;
+          product.image = action.payload.image;
         }
         return product;
       });
