@@ -5,7 +5,6 @@ import SideBar from "./components/SideBar";
 import BodyContent from "./components/BodyContent";
 import { SidebarProvider } from "./components/ContextApi/SidebarContext";
 import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
-import DashBoard from "./components/content/DashBoard";
 import ProductsMangement from "./components/content/ProductsMangement";
 import OrdersManagement from "./components/content/OrdersManagement";
 import OrdersCalender from "./components/content/OrdersCalender";
