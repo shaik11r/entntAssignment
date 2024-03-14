@@ -9,7 +9,7 @@ This project is a web application built using React.js for managing orders and p
 1. Clone the repository.
 2. Navigate to the project directory.
 3. Run `npm install` to install dependencies.
-4. Run `npm start` to start the development server.
+4. Run `npm run dev` to start the development server.
 5. Access the application in your browser at `http://localhost:5173`.
 
 ## Getting Started
