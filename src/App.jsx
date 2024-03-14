@@ -7,6 +7,7 @@ import { SidebarProvider } from "./components/ContextApi/SidebarContext";
 import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
 import DashBoard from "./components/content/DashBoard";
 import ProductsMangement from "./components/content/ProductsMangement";
+import OrdersManagement from "./components/content/OrdersManagement";
 
 function App() {
   return (
@@ -19,6 +20,7 @@ function App() {
             <Route path="" element={<BodyContent />} />
 
             <Route path="products" element={<ProductsMangement />} />
+            <Route path="orders" element={<OrdersManagement />} />
           </Routes>
         </Router>
       </SidebarProvider>

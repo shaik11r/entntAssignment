@@ -35,7 +35,7 @@ const Sidebar = () => {
         initial={{ background: "transparent" }}
         whileHover={{ background: "orange", borderRadius: "1rem" }}>
         <InventoryIcon />
-        <span>Orders Management</span>
+        <Link to="/orders">Orders Management</Link>
       </motion.div>
       <motion.div
         className="p-4 mt-4"

@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import { useSidebar } from "../ContextApi/SidebarContext";
 import { motion } from "framer-motion";
-import { addProduct, updateProduct } from "../../reducers/productReducer";
+import { addProduct, deleteProduct, updateProduct } from "../../reducers/productReducer";
 
 const ProductsMangement = () => {
   const { isSidebarOpen } = useSidebar();
@@ -10,7 +10,6 @@ const ProductsMangement = () => {
   const ProductList = useSelector((state) => state.products.value);
   const [price, setPrice] = useState(0);
   const [quantity, setQuantity] = useState(0);
-  const [total, setTotal] = useState(price * quantity);
   const [errors, setErrors] = useState({});
   const [isEditing, setIsEditing] = useState(false);
   const [openModal, setOpenModal] = useState(false);
@@ -22,6 +21,9 @@ const ProductsMangement = () => {
   function onCloseModal() {
     setOpenModal(false);
   }
+  const productsDeleteFunction = (id) => {
+    dispatch(deleteProduct(id));
+  };
 
   const productsEditfunction = (product) => {
     setOpenModal(true);
@@ -164,7 +166,7 @@ const ProductsMangement = () => {
                     initial={{ color: "black", background: "white" }}
                     whileHover={{ scale: 1.1, background: "red", color: "white" }}
                     whileTap={{ scale: 0.9, transition: 0.5 }}
-                    onClick={() => productsEditfunction(prod)}>
+                    onClick={() => productsDeleteFunction(prod.id)}>
                     Delete
                   </motion.button>
                 </div>
