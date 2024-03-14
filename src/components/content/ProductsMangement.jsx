@@ -119,7 +119,7 @@ const ProductsMangement = () => {
       <div
         className={`  ${
           isSidebarOpen ? `ml-[200px]` : `ml-[0px]`
-        } h-svh bg-black   text-white no-scrollbar mt-[65px]`}>
+        } responsiveorders h-svh bg-black   text-white no-scrollbar mt-[65px]`}>
         <h1 className="text-3xl grid place-items-center mb-5 p-4 font-mono">All Products</h1>
         <div className="flex justify-between ml-5 mr-5 mb-5">
           <button

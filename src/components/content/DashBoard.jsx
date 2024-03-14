@@ -5,8 +5,10 @@ import DoneIcon from "@mui/icons-material/Done";
 import LocalShippingIcon from "@mui/icons-material/LocalShipping";
 import PendingIcon from "@mui/icons-material/Pending";
 import { useSelector } from "react-redux";
+import BorderAllIcon from "@mui/icons-material/BorderAll";
 const DashBoard = () => {
   const Orderslist = useSelector((state) => state.orders.value);
+  const productsList = useSelector((state) => state.products.value);
 
   const [totalOrders, setTotalOrders] = useState(0);
   const [deliveredOrders, setDeliveredOrders] = useState(0);
@@ -75,6 +77,13 @@ const DashBoard = () => {
             <PendingIcon style={{ fontSize: 50 }} />
           </div>
           <h1 className="text-3xl">{pendingOrders}</h1>
+        </div>
+        <div className="card bg-purple-600 h-[200px] p-4 rounded-lg">
+          <div className="flex justify-between py-5 text-3xl items-center">
+            <h3 className="text-xl">Orders Pending</h3>
+            <BorderAllIcon style={{ fontSize: 50 }} />
+          </div>
+          <h1 className="text-3xl">{productsList.length}</h1>
         </div>
       </div>
     </>

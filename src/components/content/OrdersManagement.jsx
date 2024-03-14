@@ -20,12 +20,25 @@ const OrdersManagement = () => {
       <div
         className={`  ${
           isSidebarOpen ? `ml-[200px]` : `ml-[0px]`
-        } h-svh bg-slate-500   text-white no-scrollbar mt-[65px]`}>
+        } responsiveorders h-svh bg-slate-500   text-white no-scrollbar mt-[65px]`}>
         <div className="p-4 rounded-lg  bg-slate-700">
           <h1 className="text-3xl font-mono mb-5">Orders List</h1>
           {Orderslist.map((order) => {
             return (
-              <div className="border-2 border-orange-400 rounded-lg p-6 mb-5" key={order.id}>
+              <div
+                className={` ${
+                  order.status === "pending"
+                    ? "border-blue-400 border"
+                    : order.status === "delivered"
+                    ? "border-green-400 border"
+                    : order.status === "cancelled"
+                    ? "border-red-400 border"
+                    : order.status === "shipped"
+                    ? "border-yellow-400 border"
+                    : ""
+                }
+                     rounded-lg p-6 mb-5 font-mono`}
+                key={order.id}>
                 <h2>Order ID: ABV00{order.id}</h2>
                 <p>Date: {order.date}</p>
                 <p>Name: {order.name}</p>
@@ -41,7 +54,7 @@ const OrdersManagement = () => {
                         : order.status === "cancelled"
                         ? "bg-red-400 text-white"
                         : order.status === "shipped"
-                        ? "bg-yellow-400 text-white"
+                        ? "bg-yellow-400 text-black"
                         : ""
                     }`}>
                     {order.status}

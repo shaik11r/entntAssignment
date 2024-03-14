@@ -11,7 +11,7 @@ const Sidebar = () => {
 
   return (
     <div
-      className={`fixed top-[64px] left-0 w-[200px] bg-black h-svh py-10 text-white border-r-2 border-orange-400 ${
+      className={`fixed z-[999] top-[64px] left-0 w-[200px] bg-black h-svh py-10 text-white border-r-2 border-orange-400 ${
         isSidebarOpen ? "translate-x-0" : "-translate-x-full"
       }`}>
       <motion.div
