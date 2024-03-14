@@ -11,13 +11,13 @@ const Sidebar = () => {
 
   return (
     <div
-      className={`fixed z-[999] top-[64px] left-0 w-[200px] bg-black h-svh py-10 text-white border-r-2 border-orange-400 ${
+      className={`fixed z-[992] top-[64px] left-0 w-[200px] bg-black h-svh py-10 text-white border-r-2 border-orange-400 ${
         isSidebarOpen ? "translate-x-0" : "-translate-x-full"
       }`}>
       <motion.div
         className="p-4 mt-4"
         initial={{ background: "transparent" }}
-        whileHover={{ background: "orange", borderRadius: "1rem", border: "none" }}>
+        whileHover={{ background: "orange", borderRadius: "1rem" }}>
         <DashboardIcon />
         <span>
           <Link to="/">Dashboard</Link>

@@ -68,6 +68,7 @@ const OrdersManagement = () => {
                   <select
                     className="bg-black rounded p-1"
                     value={order.status}
+                    disabled={order.status === "delivered"}
                     onChange={(e) => handleToggleStatus(order.id, e.target.value)}>
                     <option value="pending">Pending</option>
                     <option value="shipped">Shipped</option>
