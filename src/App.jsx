@@ -8,6 +8,7 @@ import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
 import DashBoard from "./components/content/DashBoard";
 import ProductsMangement from "./components/content/ProductsMangement";
 import OrdersManagement from "./components/content/OrdersManagement";
+import OrdersCalender from "./components/content/OrdersCalender";
 
 function App() {
   return (
@@ -17,10 +18,10 @@ function App() {
           <Navbar />
           <SideBar />
           <Routes>
-            <Route path="" element={<BodyContent />} />
-
-            <Route path="products" element={<ProductsMangement />} />
-            <Route path="orders" element={<OrdersManagement />} />
+            <Route path="/" element={<BodyContent />} />
+            <Route path="/products" element={<ProductsMangement />} />
+            <Route path="/orders" element={<OrdersManagement />} />
+            <Route path="/calenderview" element={<OrdersCalender />} />
           </Routes>
         </Router>
       </SidebarProvider>

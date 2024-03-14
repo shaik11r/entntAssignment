@@ -8,7 +8,6 @@ import { useSidebar } from "./ContextApi/SidebarContext";
 import { Link } from "react-router-dom";
 const Sidebar = () => {
   const { isSidebarOpen } = useSidebar();
-
   return (
     <div
       className={`fixed z-[992] top-[64px] left-0 w-[200px] bg-black h-svh py-10 text-white border-r-2 border-orange-400 ${
@@ -42,7 +41,7 @@ const Sidebar = () => {
         initial={{ background: "transparent" }}
         whileHover={{ background: "orange", borderRadius: "1rem" }}>
         <CalendarTodayIcon />
-        <span>Orders Calendar</span>
+        <Link to="/calenderview">Orders Calendar</Link>
       </motion.div>
     </div>
   );
