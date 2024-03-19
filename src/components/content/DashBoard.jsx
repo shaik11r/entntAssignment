@@ -80,7 +80,7 @@ const DashBoard = () => {
         </div>
         <div className="card bg-purple-600 h-[200px] p-4 rounded-lg">
           <div className="flex justify-between py-5 text-3xl items-center">
-            <h3 className="text-xl">Orders Pending</h3>
+            <h3 className="text-xl">Total products</h3>
             <BorderAllIcon style={{ fontSize: 50 }} />
           </div>
           <h1 className="text-3xl">{productsList.length}</h1>
